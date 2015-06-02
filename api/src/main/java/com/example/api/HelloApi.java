@@ -11,9 +11,9 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-@Path("/ping")
+@Path("/hello")
 @Produces(MediaType.APPLICATION_JSON)
-public interface PingApi {
+public interface HelloApi {
 
     @GET
     @Timed

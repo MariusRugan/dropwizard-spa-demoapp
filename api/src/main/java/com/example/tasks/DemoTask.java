@@ -9,12 +9,12 @@ import java.io.PrintWriter;
 
 import io.dropwizard.servlets.tasks.Task;
 
-public class MyTestTask extends Task {
+public class DemoTask extends Task {
 
   final Logger logger = LoggerFactory.getLogger(getClass());
 
-  public MyTestTask() {
-    super("test");
+  public DemoTask() {
+    super("DemoTask");
   }
 
   @Override

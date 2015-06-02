@@ -25,9 +25,8 @@ server:
       useDateHeader: true
       useForwardedHeaders: true
 
-
 logging:
   level: INFO
   loggers:
-    com.richo: ALL
+    com.example: ALL
     org.eclipse.jetty: WARN

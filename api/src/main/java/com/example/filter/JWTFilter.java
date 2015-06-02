@@ -12,6 +12,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
+import javax.ws.rs.WebApplicationException;
 
 import org.apache.commons.codec.binary.Base64;
 import org.slf4j.Logger;
@@ -47,9 +48,7 @@ public class JWTFilter implements Filter {
 
     try {
       Map<String, Object> decoded = jwtVerifier.verify(token);
-
       // Do something with decoded information like UserId
-
       chain.doFilter(request, response);
 
     } catch (Exception e) {
@@ -69,12 +68,12 @@ public class JWTFilter implements Filter {
     String token = null;
     final String authorizationHeader = httpRequest.getHeader("authorization");
     if (authorizationHeader == null) {
-      throw new ServletException("Unauthorized: No Authorization header was found");
+      throw new WebApplicationException("Unauthorized: No Authorization header was found");
     }
 
     String[] parts = authorizationHeader.split(" ");
     if (parts.length != 2) {
-      throw new ServletException("Unauthorized: Format is Authorization: Bearer [token]");
+      throw new WebApplicationException("Unauthorized: Format is Authorization: Bearer [token]");
     }
 
     String scheme = parts[0];

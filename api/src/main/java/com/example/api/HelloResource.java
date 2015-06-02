@@ -10,11 +10,11 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.atomic.AtomicLong;
 
 
-public class HelloWorldResource implements HelloWorldApi {
-
-    private static final AtomicLong initCounter = new AtomicLong();
+public class HelloResource implements HelloApi {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
+
+    private static final AtomicLong initCounter = new AtomicLong();
 
     private final String template;
 
@@ -22,7 +22,7 @@ public class HelloWorldResource implements HelloWorldApi {
 
     private final AtomicLong counter;
 
-    public HelloWorldResource(String template, String defaultName) {
+    public HelloResource(String template, String defaultName) {
         this.template = template;
         this.defaultName = defaultName;
         this.counter = new AtomicLong();

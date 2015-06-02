@@ -10,8 +10,9 @@ import java.util.Set;
 
 /**
  * Since JWT tokens are self-validated, in order to prevent undesirable tokens (most often logged out) from
- * authenticating we need to add them to a blacklist until they expire TODO add expiration so that this set doesn't
- * indefinitely
+ * authenticating we need to add them to a blacklist until they expire
+ *
+ * @TODO add expiration so that this set doesn't indefinitely
  */
 public class SimpleSetBlacklist implements TokenBlacklist {
 
@@ -24,7 +25,7 @@ public class SimpleSetBlacklist implements TokenBlacklist {
 
   @Override
   public void blacklist(Token token) {
-    logger.trace("Blacklisted {}", token);
+    logger.warn("Blacklisted {}", token);
     tokenSet.add(token);
   }
 

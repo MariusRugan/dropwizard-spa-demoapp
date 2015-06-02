@@ -12,7 +12,6 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-
 public class MyFilter implements Filter {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
