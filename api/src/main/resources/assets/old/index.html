@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/Api.js"></script>
+</head>
+<meta charset="UTF-8">
+<title>Dropwizard</title>
+
+<body>
+<div id="headerDiv">
+    <h2 id="welcomeHeader">Welcome</h2>
+</div>
+<div class="mainDiv" id="inputNameDiv">
+    <h3>Please login</h3>
+
+    <form id="loginForm">
+        <input type="text" name="username" id="nameInput"/> <br/>
+        <input type="password" name="password" id="passwordInput" /> <br/>
+        <input type="submit" id="loginSubmit" value="Confirm"/>
+    </form>
+</div>
+<div class="mainDiv" id="mainPageDiv" style="display:none">
+    <h3>Logged in</h3>
+    Logged in as: <span id="usernameSpan"></span> <br/>
+    Your role is: <span id="roleSpan"></span> <br/>
+    The raw token is: <span id="rawTokenSpan"></span> <br/>
+    <button id="logoutButton">Logout</button>
+    <button id="refreshTokenButton">Refresh Token</button>
+    <br/>
+</div>
+<br/><br/>
+
+<div id="miscDiv">
+    Call the Requestscoped api <a href="api/request">here</a> <br/>
+    Link to wadl <a href="api/application.wadl">here</a>
+</div>
+</body>
+</html>
