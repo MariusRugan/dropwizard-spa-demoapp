@@ -5,8 +5,6 @@
         <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="https://cdn.auth0.com/js/lock-6.js"></script>
 
-        <script>try{Typekit.load();}catch(e){}</script>
-
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- font awesome from BootstrapCDN -->
@@ -15,7 +13,9 @@
 
         <script src="auth0-variables.js"> </script>
         <script src="app.js"> </script>
+
         <link href="app.css" rel="stylesheet">
+
     </head>
     <body class="home">
         <div class="container">
@@ -24,7 +24,7 @@
                 <a ng-click="login()" class="btn btn-primary btn-lg btn-login btn-block">SignIn</a>
               </div>
               <div class="logged-in-box auth0-box logged-in" style="display: none;">
-                <h1 id="logo"><img src="auth0_logo_final_blue_RGB.png" /></h1>
+                <h1 id="logo"></h1>
                 <img class="avatar"/>
                 <h2>Welcome <span class="nickname"></span></h2>
                 <button class="btn btn-lg btn-primary btn-api">Call API</button>
