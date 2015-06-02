@@ -1,8 +1,13 @@
-Dropwizard Test
-================
+Dropwizard Demo App & Playground
+================================
+
+
+Credits
+-------
+Original code based on: https://github.com/RichoDemus/Dropwizard-test
 
 Intro
--------
+-----
 Simple program to test Dropwizard  
 Based on https://dropwizard.github.io/dropwizard/getting-started.html
 
