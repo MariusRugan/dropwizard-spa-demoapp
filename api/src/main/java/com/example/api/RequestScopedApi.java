@@ -10,10 +10,10 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/request")
 @Produces(MediaType.APPLICATION_JSON)
-public interface RequestScopedApi
-{
-	@RolesAllowed("admin")
-	@GET
-	@Timed
-	String test();
+public interface RequestScopedApi {
+
+    @RolesAllowed("admin")
+    @GET
+    @Timed
+    String test();
 }

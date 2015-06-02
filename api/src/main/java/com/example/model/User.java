@@ -1,23 +1,20 @@
 package com.example.model;
 
-public class User
-{
-	private final String name;
-	private final String role;
+public class User {
 
-	public User(String name, String role)
-	{
-		this.name = name;
-		this.role = role;
-	}
+    private final String name;
+    private final String role;
 
-	public String getName()
-	{
-		return name;
-	}
+    public User(String name, String role) {
+        this.name = name;
+        this.role = role;
+    }
 
-	public String getRole()
-	{
-		return role;
-	}
+    public String getName() {
+        return name;
+    }
+
+    public String getRole() {
+        return role;
+    }
 }

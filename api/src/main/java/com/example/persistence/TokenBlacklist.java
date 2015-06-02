@@ -2,9 +2,9 @@ package com.example.persistence;
 
 import com.example.model.Token;
 
-public interface TokenBlacklist
-{
-	void blacklist(Token token);
+public interface TokenBlacklist {
 
-	boolean isBlackListed(Token token);
+    void blacklist(Token token);
+
+    boolean isBlackListed(Token token);
 }

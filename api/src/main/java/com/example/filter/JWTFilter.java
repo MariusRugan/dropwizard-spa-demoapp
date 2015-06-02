@@ -29,9 +29,7 @@ public class JWTFilter implements Filter {
   @Override
   public void init(FilterConfig filterConfig) throws ServletException {
     jwtVerifier = new JWTVerifier(
-        new Base64(true).decodeBase64(
-            "9A5qiAy8qqw1BuGsu3tpqpOelvecWesPLs07DkZAxiONt2J1_3YJWF392s5Q_AnQ"),
-            "0FmFogYWO21GXbwjUcZ4D7Nsuklvosbk"
+        new Base64(true).decodeBase64("9A5qiAy8qqw1BuGsu3tpqpOelvecWesPLs07DkZAxiONt2J1_3YJWF392s5Q_AnQ"), "0FmFogYWO21GXbwjUcZ4D7Nsuklvosbk"
     );
   }
 

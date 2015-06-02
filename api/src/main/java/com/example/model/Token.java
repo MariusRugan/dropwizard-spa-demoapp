@@ -16,9 +16,7 @@ public class Token {
   @JsonIgnore
   @Override
   public String toString() {
-    return "JWTToken{" +
-           "raw='" + raw + '\'' +
-           '}';
+    return "JWTToken{" + "raw='" + raw + '\'' + '}';
   }
 
   @JsonProperty
