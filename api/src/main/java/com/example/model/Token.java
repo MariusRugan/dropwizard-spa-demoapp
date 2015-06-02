@@ -4,48 +4,47 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Token
-{
-	protected final String raw;
+public class Token {
 
-	@JsonCreator
-	public Token(@JsonProperty("raw") String base64)
-	{
-		this.raw = base64;
-	}
+  protected final String raw;
 
-	@JsonIgnore
-	@Override
-	public String toString()
-	{
-		return "JWTToken{" +
-				"raw='" + raw + '\'' +
-				'}';
-	}
+  @JsonCreator
+  public Token(@JsonProperty("raw") String base64) {
+    this.raw = base64;
+  }
 
-	@JsonProperty
-	public String getRaw()
-	{
-		return raw;
-	}
+  @JsonIgnore
+  @Override
+  public String toString() {
+    return "JWTToken{" +
+           "raw='" + raw + '\'' +
+           '}';
+  }
 
-	@JsonIgnore
-	@Override
-	public boolean equals(Object o)
-	{
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
+  @JsonProperty
+  public String getRaw() {
+    return raw;
+  }
 
-		JWTToken jwtToken = (JWTToken) o;
-
-        return raw.equals(jwtToken.raw);
-
+  @JsonIgnore
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
     }
 
-	@JsonIgnore
-	@Override
-	public int hashCode()
-	{
-		return raw.hashCode();
-	}
+    JWTToken jwtToken = (JWTToken) o;
+
+    return raw.equals(jwtToken.raw);
+
+  }
+
+  @JsonIgnore
+  @Override
+  public int hashCode() {
+    return raw.hashCode();
+  }
 }

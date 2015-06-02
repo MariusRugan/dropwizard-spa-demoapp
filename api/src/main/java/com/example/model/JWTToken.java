@@ -6,13 +6,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * TODO REMOVE ME
  */
-public class JWTToken extends Token
-{
+public class JWTToken extends Token {
 
-	@JsonCreator
-	public JWTToken(@JsonProperty("raw") String base64)
-	{
-		super(base64);
-	}
+  @JsonCreator
+  public JWTToken(@JsonProperty("raw") String base64) {
+    super(base64);
+  }
 
 }

@@ -9,45 +9,40 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Since JWT tokens are self-validated, in order to prevent undesirable tokens (most often logged out)
- * from authenticating we need to add them to a blacklist until they expire
- * TODO add expiration so that this set doesn't indefinitely
+ * Since JWT tokens are self-validated, in order to prevent undesirable tokens (most often logged out) from
+ * authenticating we need to add them to a blacklist until they expire TODO add expiration so that this set doesn't
+ * indefinitely
  */
-public class SimpleSetBlacklist implements TokenBlacklist
-{
-	private final Logger logger = LoggerFactory.getLogger(getClass());
-	private final Set<Token> tokenSet;
+public class SimpleSetBlacklist implements TokenBlacklist {
 
-	public SimpleSetBlacklist()
-	{
-		tokenSet = new HashSet<>();
-	}
+  private final Logger logger = LoggerFactory.getLogger(getClass());
+  private final Set<Token> tokenSet;
 
-	@Override
-	public void blacklist(Token token)
-	{
-		logger.trace("Blacklisted {}", token);
-		tokenSet.add(token);
-	}
+  public SimpleSetBlacklist() {
+    tokenSet = new HashSet<>();
+  }
 
-	@Override
-	public boolean isBlackListed(Token token)
-	{
-		return tokenSet.contains(token);
-	}
+  @Override
+  public void blacklist(Token token) {
+    logger.trace("Blacklisted {}", token);
+    tokenSet.add(token);
+  }
 
-	public void clearBlackList()
-	{
-		tokenSet.clear();
-	}
+  @Override
+  public boolean isBlackListed(Token token) {
+    return tokenSet.contains(token);
+  }
 
-	private static class InstanceHolder
-	{
-		private static final SimpleSetBlacklist INSTANCE = new SimpleSetBlacklist();
-	}
+  public void clearBlackList() {
+    tokenSet.clear();
+  }
 
-	public static SimpleSetBlacklist getInstance()
-	{
-		return InstanceHolder.INSTANCE;
-	}
+  private static class InstanceHolder {
+
+    private static final SimpleSetBlacklist INSTANCE = new SimpleSetBlacklist();
+  }
+
+  public static SimpleSetBlacklist getInstance() {
+    return InstanceHolder.INSTANCE;
+  }
 }

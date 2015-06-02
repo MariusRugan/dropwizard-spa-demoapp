@@ -16,8 +16,7 @@ public class DemoAppConfiguration extends Configuration {
   final private String defaultName;
 
   @JsonCreator
-  public DemoAppConfiguration(@JsonProperty("template") String template,
-                              @JsonProperty("defaultName") String defaultName) {
+  public DemoAppConfiguration(@JsonProperty("template") String template, @JsonProperty("defaultName") String defaultName) {
     this.template = template;
     this.defaultName = defaultName;
   }
