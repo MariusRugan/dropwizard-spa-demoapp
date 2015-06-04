@@ -14,3 +14,7 @@ URLs
 ----
 * [API](http://localhost:9080)
 * [Admin page](http://localhost:9081)
+
+Misc
+----
+Dropwizard intro: https://www.youtube.com/watch?v=2tSWsjtw0ms
