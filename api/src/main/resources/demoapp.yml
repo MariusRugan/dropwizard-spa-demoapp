@@ -3,6 +3,7 @@ defaultName: Stranger
 
 server:
   rootPath: '/api/*'
+  registerDefaultExceptionMappers: false
   applicationConnectors:
     - type: http
       port: 9080
@@ -30,3 +31,14 @@ logging:
   loggers:
     com.example: ALL
     org.eclipse.jetty: WARN
+  appenders:
+    - type: console
+      threshold: ALL
+      timeZone: UTC
+      target: stdout
+    - type: file
+      threshold: ALL
+      currentLogFilename: ../log/demoapp.log
+      archivedLogFilenamePattern: ../log/demoapp-%d.log.gz
+      archivedFileCount: 5
+      timeZone: UTC

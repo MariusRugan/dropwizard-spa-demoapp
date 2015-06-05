@@ -12,10 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.SecurityContext;
 
-/**
- * Created by richard.tjerngren on 2015-01-14.
- */
-public class MySecurityContext implements SecurityContext {
+public class DemoAppSecurityContext implements SecurityContext {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
     private final Optional<User> user;
@@ -23,7 +20,7 @@ public class MySecurityContext implements SecurityContext {
     @Context
     HttpServletRequest webRequest;
 
-    public MySecurityContext(final Optional<User> user) {
+    public DemoAppSecurityContext(final Optional<User> user) {
         this.user = user;
     }
 

@@ -23,15 +23,19 @@ public class HelloResource implements HelloApi {
     private final AtomicLong counter;
 
     public HelloResource(String template, String defaultName) {
+
         this.template = template;
         this.defaultName = defaultName;
         this.counter = new AtomicLong();
+
         logger.warn("HelloWorldResource number {} created", initCounter.incrementAndGet());
     }
 
     @Override
-    public Saying sayHello(Optional<String> name) {
-        logger.info("{} is using sayHello Api", name.or("Unknown"));
+    public Saying getHello(Optional<String> name) {
+
+        logger.info("{} is using getHello Api", name.or("Unknown"));
+
         final String value = String.format(template, name.or(defaultName));
         return new Saying(counter.incrementAndGet(), value);
     }

@@ -1,8 +1,8 @@
 package com.example.api;
 
 import com.example.authentication.AuthenticationManager;
-import com.example.authentication.exception.InvalidTokenException;
-import com.example.authentication.exception.InvalidUserNameOrPasswordException;
+import com.example.exception.InvalidTokenException;
+import com.example.exception.InvalidUserNameOrPasswordException;
 import com.example.model.JWTToken;
 import com.example.model.Token;
 import com.example.persistence.SimpleSetBlacklist;

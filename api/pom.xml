@@ -42,6 +42,13 @@
             <version>1.4</version>
         </dependency>
 
+        <!-- lulz -->
+        <dependency>
+            <groupId>com.github.stokito</groupId>
+            <artifactId>gag-annotations</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
         <!-- test -->
         <dependency>
             <groupId>junit</groupId>
